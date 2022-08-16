@@ -43,7 +43,7 @@ export default function Products() {
               >
                 <div style={{gap: "10px", padding: "5px"}} className="d-flex column">
                   <img className="product-image" src={`images/${product.image}`} alt={product.name} />
-                  <h2 className="product-title">{`${product.name} ${product.model} ${product.screenSize} inches laptop`}</h2>
+                  <h1 className="product-title">{product.name} {product.model} {product.screenSize} inches laptop</h1>
                   <div style={{gap: "8px"}} className="d-flex row end">
                     <p style={{fontWeight: "500"}}>{product.score}</p>
                     <img className="star-image" src="images/star-image.svg" alt="" />
@@ -52,7 +52,7 @@ export default function Products() {
                     <div style={{justifyContent: product.percentDiscount ? "space-between" : "flex-end"}} className="d-flex row end">
                       {product.percentDiscount && 
                       <div className="d-flex center product-discount">
-                        <span>{`${product.percentDiscount}%`}</span>
+                        <span>{product.percentDiscount}%</span>
                       </div>}
                       <div className="d-flex center">
                         <span className="product-price">{product.price}</span>
@@ -60,7 +60,7 @@ export default function Products() {
                     </div>
                     {product.previousPrice && 
                     <div className="d-flex">
-                      <div className="product-previous-price">{`$${product.previousPrice}`}</div>
+                      <div className="product-previous-price">${product.previousPrice}</div>
                     </div>}
                   </div>
                 </div>
